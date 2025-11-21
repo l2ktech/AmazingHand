@@ -1,7 +1,7 @@
 Project is licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 
-Mechanical design is licensed under a :
+Mechanical design is licensed under a:
 [Creative Commons Attribution 4.0 International License][cc-by].
 [![CC BY 4.0][cc-by-image]][cc-by]
 [![CC BY 4.0][cc-by-shield]][cc-by]
@@ -16,17 +16,17 @@ Mechanical design is licensed under a :
 
 ![Patterns](assets/Patterns_Overview.jpg)
 
-Robotic hands are often very expensive and not so expressive. More dexterous often needs cables and deported actuators in forearm, i.e.,
+Robotic hands are often very expensive and not so expressive. More dexterous ones often need cables and deported actuators in the forearm, i.e.,
 
 The aim of this project is to be able to explore humanoid hand possibilities on a real robot (and Reachy2 is the perfect candidate for that !) with moderate cost.
 => Wrist interface is designed for Reachy2's wrist (Orbita 3D), but it can be easily adapted to other robot's wrist...
 
 ![Reachy](assets/Reachy.jpg)
 
-Amazing Hand is :
+Amazing Hand is:
 - 8 dofs humanoid hand with 4 fingers
 - 2 phalanxes per finger articulated together
-- flexible shells allmost everywhere
+- flexible shells almost everywhere
 - All actuators inside the hand, without any cables
 - 3D printable
 - 400g weight
@@ -36,17 +36,17 @@ Amazing Hand is :
 [AmazingHand_Overview](/docs/AmazingHand_Overview.pdf)
 
 ![Hand Overview](assets/Hand_Overview.jpg)
-Each finger is driven by parallel mechanism. 
-That means 2x small Feetech SCS0009 servos are used to move each finger in flexion / extension & Abduction / Adduction
+Each finger is driven by a parallel mechanism. 
+That means 2x small Feetech SCS0009 servos are used to move each finger in flexion/extension and abduction/adduction
 
 ![Finger Overview](assets/Finger_Overview.jpg)
 
 
-2 ways of control are available :
-- Use a Serial bus driver (waveshare i.e.) + Python script
-- Use an Arduino + feetech TTL Linker
+Two control methods are available:
+- Use a serial bus driver (Waveshare i.e.) + Python script
+- Use an Arduino + Feetech TTL Linker
 
-Detailed explaination are available for both ways and Basic demo software is available also.
+Detailed explanations are available for both ways, and basic demo software is also available.
 Up to you !
 
 
@@ -82,7 +82,7 @@ Details for custom 3D printed parts are here:
 
 ![3Dparts](assets/3Dparts.jpg)
 
-Here is a guide to explain how to print all the needed custom parts:
+Here is a guide explaining how to print all the needed custom parts:
 [=> 3D Printing Guide](/docs/AmazingHand_3DprintingTips.pdf)
 ![3DPrint_example](/assets/3DPrint.jpg) 
 
@@ -91,14 +91,14 @@ Here is a guide to explain how to print all the needed custom parts:
 ## CAD Files and Onshape document
 STL and Steps files can be found [here](https://github.com/pollen-robotics/AmazingHand/tree/main/cad) 
 
-Note that fingers are the same if you want to build a left hand, but some parts are symetrical. Specific right hand parts are preceded by an "R", and other of the left hand parts by an "L".
+Note that fingers are the same if you want to build a left hand, but some parts are symmetrical. Specific right hand parts are preceded by an "R", and other left hand parts by an "L".
 
 ![Heart](/assets/Heart.jpg)
 
 Everyone can access the Onshape document too:   
 [Link Onshape](https://cad.onshape.com/documents/430ff184cf3dd9557aaff2be/w/e3658b7152c139971d22c688/e/bd399bf1860732c6c6a2ee45?renderMode=0&uiState=6867fd3ef773466d059edf0c)  
 
-Note that predefined position are available in "named position" tooling, with corresponding servos angles
+Note that predefined positions are available in the "named position" tooling, with corresponding servo angles
 
 ![Onshape&Named_Pos](/assets/Named_Pos.jpg)  
 
@@ -108,49 +108,49 @@ Assembly guide for the Amazing Hand in combination with standard components in t
 [=> Assembly Guide](/docs/AmazingHand_Assembly.pdf)  
 ![Assembly_example](/assets/Assembly.jpg)  
 
-You will need a simple program / script to calibrate each finger, available here :
-- With Python & Waveshare serial bus driver : [here](https://github.com/pollen-robotics/AmazingHand/tree/main/PythonExample)
-- With Arduino & TTLinker : [here](https://github.com/pollen-robotics/AmazingHand/tree/main/ArduinoExample)
+You will need a simple program / script to calibrate each finger, available here:
+- With Python & Waveshare serial bus driver: [here](https://github.com/pollen-robotics/AmazingHand/tree/main/PythonExample)
+- With Arduino & TTLinker: [here](https://github.com/pollen-robotics/AmazingHand/tree/main/ArduinoExample)
 
 
-Note that this assembly guide is for a standalone Right hand.
+Note that this assembly guide is for a standalone right hand.
 
-If you need to build a standalone Left hand, you can keep the sames IDs for servos location, and select if it's a right or left hand in the software.
+If you need to build a standalone left hand, you can keep the same IDs for servo locations, and select if it's a right or left hand in the software.
 
 
 ## Run basic Demo
 
 A basic demo is available with both Python & Arduino.
 
-You will need external power supply to be able to power the 8 actuators inside the hand.
+You will need an external power supply to be able to power the 8 actuators inside the hand.
 
 If you don't have one already, a simple external power supply could be a DC/DC 220V -> 5V / 2A adapter with jack connector.
-Check on the Bom List :
+Check on the BOM list:
 [AmazingHand BOM](https://docs.google.com/spreadsheets/d/1QH2ePseqXjAhkWdS9oBYAcHPrxaxkSRCgM_kOK0m52E/edit?gid=1269903342#gid=1269903342) 
 
-- Python script : "AmazingHand_Demo.py" [here](https://github.com/pollen-robotics/AmazingHand/tree/main/ArduinoExample)
+- Python script: "AmazingHand_Demo.py" [here](https://github.com/pollen-robotics/AmazingHand/tree/main/ArduinoExample)
   
-- Arduino program : "AmazingHand_Demo.ino" [here](https://github.com/pollen-robotics/AmazingHand/tree/main/PythonExample)
+- Arduino program: "AmazingHand_Demo.ino" [here](https://github.com/pollen-robotics/AmazingHand/tree/main/PythonExample)
 
 
 https://github.com/user-attachments/assets/485fc1f4-cc57-4e59-90b5-e84518b9fed0
 
 ## You need both right & left hands on the same bus ?
 
-If you need to build both right and left hands to plug them on a robot, you will have to attribute differents IDs for right and left hands. You can't have same ID for different servos on the same serial bus...
-Very important thing is to keep same assembly order for servos, but set them different IDs than for the right hand, as following :
+If you need to build both right and left hands to plug them on a robot, you will have to attribute different IDs for right and left hands. You can't have same ID for different servos on the same serial bus...
+Very important thing is to keep same assembly order for servos, but set them different IDs than for the right hand, as follows:
 ![IDs](assets/Both_Hands-IDs.jpg)
 
 Specific software is also needed, in order to drive each hand independently.
-This simple demo runs the same hand patterns on both hands simultaneously, but it's only available in Python: 
+This simple demo runs the same hand patterns on both hands simultaneously, but it's only available in Python:
 "AmazingHand_Demo_Both" [here](https://github.com/pollen-robotics/AmazingHand/tree/main/PythonExample)
 
 # Disclaimer
 
-I noticed some variations between theorical angles for Flexion / Extension, Abduction / Adduction and angles in real life prototypes. This is probably due to several sources of variation (3D printed parts are not perfect, balljoint rods are manually adjusted one by one, esrvo horn rework, flexibility of plastic parts...).
+I noticed some variations between theoretical angles for Flexion / Extension, Abduction / Adduction and angles in real life prototypes. This is probably due to several sources of variation (3D printed parts are not perfect, balljoint rods are manually adjusted one by one, servo horn rework, flexibility of plastic parts...).
 
-This design has not yet bene tested for long and complex prehensive tasks. Before being able to grasp objetcs safely (that means without damaging servos or mehanical parts), kind of smart software need to be build.
-SCS0009 servos have smart capaibilities as:
+This design has not yet been tested for long and complex prehensile tasks. Before being able to grasp objects safely (that means without damaging servos or mechanical parts), a kind of smart software needs to be built.
+SCS0009 servos have smart capabilities as:
 - Torque enable / disable
 - Torque feedback
 - Current position sensor
@@ -181,7 +181,7 @@ Thanks to Jianliang Shen !
 ![Force_control](/assets/Force_control.jpg)
 ![Force_control_setup](/assets/Force_control_setup.jpg)
 
-Github with code : (https://github.com/joanbox24/AmazingHand-with-sg90-servo-force-control)
+GitHub with code: (https://github.com/joanbox24/AmazingHand-with-sg90-servo-force-control)
 
 
 
@@ -190,10 +190,10 @@ https://shop.wowrobo.com/products/amazing-hand-the-open-source-robotic-hand-kit
 
 ## To Do List
 - Design small custom pcb with serial hub and power supply functions, to fit everything in the hand
-- Test with prehensive tasks 
+- Test with prehensile tasks 
       => Add smarter behaviour for closing hand, based on available motors feedbacks
 - Study possibility to have 4 different fingers length, or add a 5th finger
-- Study possibility to use STS3032 feetedch motors instead of SCS0009
+- Study possibility to use STS3032 Feetech motors instead of SCS0009
       => Stronger for quite the same volume, but servo horn is different
 - Study possibility to add compliancy by replacing rigid links to springs
 - Add fingertip sensor to push one step higher smart control
