@@ -1,0 +1,25 @@
+nodes:
+  # 节点1: 角度生成器
+  - id: move_angle
+    path: AHSimulation/examples/finger_angle_control.py
+    inputs:
+      tick: dora/timer/millis/50  # 50ms = 20Hz
+    outputs:
+      - hand_quat
+
+  # 节点2: Mujoco 仿真 (可视化 + IK 求解)
+  - id: hand_simulation_r
+    path: AHSimulation/AHSimulation/mj_mink_right.py
+    inputs:
+      r_hand_quat: move_angle/hand_quat
+      tick: dora/timer/millis/2   # 2ms = 500Hz (仿真步长)
+      tick_ctrl: dora/timer/millis/10  # 10ms = 100Hz (控制频率)
+    outputs:
+      - mj_r_joints_pos  # 输出关节角度
+    args: -m quat  # 使用姿态控制模式
+
+  # 节点3: 硬件控制器 (控制真实机械手)
+  - id: hardware_controller
+    path: AHControl/hardware_controller.py
+    inputs:
+      mj_joints_pos: hand_simulation_r/mj_r_joints_pos  # 接收仿真输出的角度
