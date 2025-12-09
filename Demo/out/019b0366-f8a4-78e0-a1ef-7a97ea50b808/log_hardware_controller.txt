@@ -1,0 +1,6 @@
+[INFO] 连接到硬件: /dev/ttyACM0 @ 1000000
+[ERROR] 硬件初始化失败: Device or resource busy
+[INFO] 请检查:
+  1. 设备是否连接
+  2. 串口路径是否正确
+  3. 是否有串口权限

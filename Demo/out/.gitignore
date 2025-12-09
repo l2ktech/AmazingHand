@@ -5,3 +5,7 @@
 /dataflow_angle_simu_test2.dora-session.yaml
 
 /dataflow_sim_to_hardware.dora-session.yaml
+
+/dataflow_tracking_simu_only.dora-session.yaml
+
+/dataflow_hand_tracking_to_hardware.dora-session.yaml

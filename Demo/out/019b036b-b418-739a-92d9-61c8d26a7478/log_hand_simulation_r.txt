@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/wzy/AmazingHand/Demo/AHSimulation/AHSimulation/mj_mink_right.py", line 8, in <module>
+    import mujoco
+ModuleNotFoundError: No module named 'mujoco'

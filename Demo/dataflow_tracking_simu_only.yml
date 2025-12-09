@@ -1,0 +1,19 @@
+nodes:
+  # 节点1: 手部追踪 (从摄像头追踪手指位置)
+  - id: hand_tracking
+    path: HandTracking/HandTracking/main.py
+    inputs:
+      tick: dora/timer/millis/30  # 33 FPS
+    outputs:
+      - r_hand_pos  # 右手位置数据
+
+  # 节点2: Mujoco 右手仿真 (可视化 + IK 求解)
+  - id: hand_simulation_r
+    path: AHSimulation/AHSimulation/mj_mink_right.py
+    inputs:
+      r_hand_pos: hand_tracking/r_hand_pos  # 从手部追踪接收位置
+      tick: dora/timer/millis/2    # 2ms = 500Hz (仿真步长)
+      tick_ctrl: dora/timer/millis/10  # 10ms = 100Hz (控制频率)
+    outputs:
+      - mj_r_joints_pos  # 输出关节角度
+    args: -m pos  # 使用位置控制模式

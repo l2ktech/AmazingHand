@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/wzy/AmazingHand/Demo/HandTracking/HandTracking/main.py", line 218, in <module>
+    main()
+  File "/home/wzy/AmazingHand/Demo/HandTracking/HandTracking/main.py", line 173, in main
+    node = Node()
+RuntimeError: Could not initiate node from environment variable. For dynamic node, please add a node id in the initialization function.
+
+Caused by:
+   0: failed to init event stream
+   1: subscribe failed: Node hand_simulation_r exited before initializing dora. For more information, run `dora logs 019b036b-b418-739a-92d9-61c8d26a7478 hand_simulation_r`.
+
+Location:
+    apis/rust/node/src/event_stream/mod.rs:161:17

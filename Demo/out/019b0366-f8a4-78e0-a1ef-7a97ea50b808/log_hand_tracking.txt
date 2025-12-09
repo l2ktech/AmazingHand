@@ -1,0 +1,8 @@
+[ WARN:0@1.197] global cap_v4l.cpp:913 open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+[ERROR:0@1.197] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1765288640.666573  109925 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1765288640.866784  110196 gl_context.cc:369] GL version: 3.2 (OpenGL ES 3.2 NVIDIA 580.95.05), renderer: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1765288640.906468  110164 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765288640.922887  110182 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
