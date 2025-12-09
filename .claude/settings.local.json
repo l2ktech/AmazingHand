@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(git branch:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(sudo usermod:*)",
+      "Bash(sudo python:*)",
+      "Bash(sudo chmod:*)",
+      "Bash(python:*)",
+      "Bash(rustc --version:*)",
+      "Bash(python3.10:*)",
+      "Bash(env/bin/pip install:*)",
+      "Bash(curl:*)",
+      "Bash(sh:*)"
     ]
   }
 }
